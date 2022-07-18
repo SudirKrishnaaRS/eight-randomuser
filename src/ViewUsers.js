@@ -36,7 +36,13 @@ const ViewUsers=({detail}) => {
                                     <th>Action</th>
                                 </tr>
                             </thead>
+                            {detail.map((detail,i) =>
+
                             <TableRecord userId={detail.userId} firstName={detail.userFirstName} lastName={detail.userLastName} userName={detail.userName} role={detail.role[0]?.roleId} agencyName={detail.agency?.name} agencyEarning={detail.agency?.totalEarnings}/>
+
+                            )}
+
+                            {/* <TableRecord userId={detail.userId} firstName={detail.userFirstName} lastName={detail.userLastName} userName={detail.userName} role={detail.role[0]?.roleId} agencyName={detail.agency?.name} agencyEarning={detail.agency?.totalEarnings}/> */}
                             {/* <TableRecord userId="2" firstName="user2" lastName="lname2" userName="user2@gmail.com"/>
                             <TableRecord userId="3" firstName="user3" lastName="lname3" userName="user3@gmail.com"/>
                             <TableRecord userId="4" firstName="user4" lastName="lname4" userName="user4@gmail.com"/>
